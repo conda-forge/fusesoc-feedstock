@@ -1,17 +1,17 @@
 {% set name = "fusesoc" %}
-{% set version = "1.10" %}
+{% set version = "1.11.0" %}
 
 package:
-  name: {{ name|lower }}
+  name : {{ name|lower }}
   version: {{ version }}
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 2d48a4549e57b5dbe46c1dad7d69ce320d2f0f8b480dd3dcd9d2b44f55aea6c5
+  sha256: 9256a1beb54d19a84471566ef972861f7101b4bd27d37e317f6fa5ed731d4a9e
 
 build:
   number: 0
-  script: {{ PYTHON }} -m pip install . --no-deps -vv
+  script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
@@ -20,7 +20,7 @@ requirements:
     - setuptools_scm
   run:
     - python
-    - edalize >=0.1.6
+    - edalize >=0.2.2
     - ipyxact >=0.2.3
     - pyparsing
     - pyyaml
@@ -32,12 +32,11 @@ test:
 
 about:
   home: https://github.com/olofk/fusesoc/
-  license: GPL-3.0
-  license_family: GPL
+  license: BSD-2-Clause
+  license_family: BSD
   license_file: LICENSE
   summary: FuseSoC is a package manager and a set of build tools for FPGA/ASIC development
 
 extra:
   recipe-maintainers:
     - hmaarrfk
- 
