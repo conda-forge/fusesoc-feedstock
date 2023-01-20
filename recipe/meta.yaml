@@ -1,5 +1,5 @@
 {% set name = "fusesoc" %}
-{% set version = "1.12.0" %}
+{% set version = "2.0" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8470c14260b171dc04b5b8aca8e481efc7c4dd390bbf8a2971d4c3307956c580
+  sha256: 6a1ef5602c9939ca07cd0b7458a4e1c85756bb830924f90cba1fcaf1b8c8ad39
 
 build:
   number: 0
