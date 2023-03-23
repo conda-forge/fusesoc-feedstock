@@ -16,13 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
-    - edalize >=0.2.2
-    - ipyxact >=0.2.3
+    - python >=3.7
+    - edalize >=0.4.1
     - pyparsing
     - pyyaml
     - simplesat >=0.8.0
