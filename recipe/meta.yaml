@@ -1,5 +1,5 @@
 {% set name = "fusesoc" %}
-{% set version = "1.12.0" %}
+{% set version = "2.1" %}
 
 package:
   name: {{ name|lower }}
@@ -7,7 +7,7 @@ package:
 
 source:
   url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: 8470c14260b171dc04b5b8aca8e481efc7c4dd390bbf8a2971d4c3307956c580
+  sha256: ccd474bf705ced6eacc768bcc8eb57c1723fdc2e611b034cc95059357b3855f7
 
 build:
   number: 0
@@ -16,13 +16,12 @@ build:
 
 requirements:
   host:
-    - python >=3.6
+    - python >=3.7
     - pip
     - setuptools_scm
   run:
-    - python >=3.6
-    - edalize >=0.2.2
-    - ipyxact >=0.2.3
+    - python >=3.7
+    - edalize >=0.4.1
     - pyparsing
     - pyyaml
     - simplesat >=0.8.0
