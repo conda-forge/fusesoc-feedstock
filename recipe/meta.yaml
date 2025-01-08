@@ -1,13 +1,13 @@
 {% set name = "fusesoc" %}
-{% set version = "2.4" %}
+{% set version = "2.4.2" %}
 
 package:
   name: {{ name|lower }}
   version: {{ version }}
 
 source:
-  url: https://pypi.io/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
-  sha256: a9392dc0be5d1dcc54ed7b20f247bb8d5a9665c90775952cd5129e398487fa96
+  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  sha256: 5b7bf203901dd33362dc0f1e64028ea01e8d9cd8a6de401e10d609baf7ae34e0
 
 build:
   number: 0
