@@ -1,18 +1,19 @@
-{% set name = "fusesoc" %}
 {% set version = "2.4.2" %}
 
 package:
-  name: {{ name|lower }}
+  name: fusesoc
   version: {{ version }}
 
 source:
-  url: https://pypi.org/packages/source/{{ name[0] }}/{{ name }}/{{ name }}-{{ version }}.tar.gz
+  url: https://pypi.org/packages/source/f/fusesoc/fusesoc-{{ version }}.tar.gz
   sha256: 5b7bf203901dd33362dc0f1e64028ea01e8d9cd8a6de401e10d609baf7ae34e0
 
 build:
-  number: 1
+  number: 2
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
+  entry_points:
+    - fusesoc = fusesoc.main:main
 
 requirements:
   host:
