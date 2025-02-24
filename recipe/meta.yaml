@@ -10,23 +10,25 @@ source:
   sha256: 5b7bf203901dd33362dc0f1e64028ea01e8d9cd8a6de401e10d609baf7ae34e0
 
 build:
-  number: 0
+  number: 1
   noarch: python
   script: {{ PYTHON }} -m pip install . -vv
 
 requirements:
   host:
-    - python >=3.7
+    - python {{ python_min }}
     - pip
     - setuptools_scm
   run:
-    - python >=3.7
+    - python >={{ python_min }}
     - edalize >=0.4.1
     - pyparsing
     - pyyaml
     - simplesat >=0.8.0
 
 test:
+  requires:
+    - python {{ python_min }}
   imports:
     - fusesoc
 
